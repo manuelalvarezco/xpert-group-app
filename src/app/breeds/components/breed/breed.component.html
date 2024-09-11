@@ -10,7 +10,7 @@
   <div class="card-footer actions">
       <div class="card-footer-actions">
         <button class="button text" [routerLink]="['/breeds/' + breed.breed_id]" routerLinkActive="router-link-active" >Detalles</button>
-        <button class="button icon" (click)="addToFavorite(breed)">
+        <button class="button icon" (click)="addToFavorite(breed)" *ngIf="!detail">
           <img width="20" src="https://www.svgrepo.com/show/13666/heart.svg" alt="favorite">
         </button>
       </div>

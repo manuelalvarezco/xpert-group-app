@@ -9,5 +9,7 @@ import { BreedComponent } from '../breed/breed.component';
   styleUrl: './breed-lists.component.scss'
 })
 export class BreedListsComponent {
+  @Input() detail = false;
+  @Input() title = '';
   @Input() breeds: any[] = [];
 }

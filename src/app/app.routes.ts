@@ -7,6 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { BreedsTableComponent } from './breeds/components/breeds-table/breeds-table.component';
 import { UserLoginComponent } from './dashboard/user-login/user-login.component';
 import { authGuard } from './auth/guards/auth.guard';
+import { FavoritesComponent } from './breeds/pages/favorites/favorites.component';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,7 @@ export const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'breeds-table', component: BreedsTableComponent },
+      { path: 'favorites', component: FavoritesComponent },
       { path: 'admin', canActivate: [ authGuard ], component: UserLoginComponent },
     ]
   },

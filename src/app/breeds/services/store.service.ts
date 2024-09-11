@@ -19,14 +19,14 @@ export class StoreService {
 
   addProduct(breed: Breed){
     this.shoppingCart.push(breed)
-    this.setStoreProduct(this.shoppingCart);
+    this.setStoreBreeds(this.shoppingCart);
     this.showSnackBar = true;
     this.myFavorites.next(this.shoppingCart);
   }
 
   removeProduct(id: number){
     this.shoppingCart.splice(id, 1);
-    this.setStoreProduct(this.shoppingCart);
+    this.setStoreBreeds(this.shoppingCart);
     this.showSnackBar = false;
     this.myFavorites.next(this.shoppingCart);
   }
@@ -40,12 +40,12 @@ export class StoreService {
   }
 
 
-  setStoreProduct(products: Breed[]){
-    localStorage.setItem('cart_product', JSON.stringify(products));
+  setStoreBreeds(products: Breed[]){
+    localStorage.setItem('favorites_breeds', JSON.stringify(products));
   }
 
   getStoreBreeds(){
-    this.breeds = localStorage.getItem('cart_product') as string;
+    this.breeds = localStorage.getItem('favorites_breeds') as string;
     return JSON.parse(this.breeds) ;
   }
 

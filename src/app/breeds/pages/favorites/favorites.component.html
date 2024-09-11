@@ -1,0 +1,6 @@
+<div class="container" *ngIf="!breeds?.length">
+  <h2>No tienes favoritos :/</h2>
+</div>
+<div *ngIf="breeds?.length">
+  <app-breed-lists [breeds]="breeds" [title]="title" [detail]="true"></app-breed-lists>
+</div>

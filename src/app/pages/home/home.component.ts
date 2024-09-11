@@ -20,7 +20,7 @@ import { BreedListsComponent } from '../../breeds/components/breed-lists/breed-l
 })
 export class HomeComponent {
   breeds: any[] = [];
-
+  title = 'Top búsquedas';
   constructor(private breedsService: BreedsService) {}
 
   ngOnInit(): void {
