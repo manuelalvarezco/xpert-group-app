@@ -12,7 +12,7 @@ export class BreedsService {
 
 
   getBreeds(params?: any) {
-    return this.http.get(`${this.URL_API}/breeds`, params);
+    return this.http.get(`${this.URL_API}/breeds`, { params });
   }
 
   getBreedById(id?: string) {

@@ -1,0 +1,23 @@
+<div class="table-contained">
+  <h2>Tabla comparativa de categorías</h2>
+  <div class="table-responsive">
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Origen</th>
+        <th>Inteligencia</th>
+        <th>Amigable</th>
+        <th>Tamaño</th>
+      </tr>
+      @for (breed of breeds; track breed) {
+      <tr>
+        <td>{{ breed.name }}</td>
+        <td>{{ breed.breeds.origin }}</td>
+        <td>{{ breed.breeds.intelligence }}</td>
+        <td>{{ breed.breeds.stranger_friendly }}</td>
+        <td>{{ breed.breeds.weight.metric }}</td>
+      </tr>
+      }
+    </table>
+  </div>
+</div>

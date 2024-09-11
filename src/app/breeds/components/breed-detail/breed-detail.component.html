@@ -1,20 +1,35 @@
-<div *ngIf="breeds?.length" class="container">
-  <swiper-container loop="true" pagination="true">
-    @for (breed of breeds; track breed) {
+<div class="container">
+  <div *ngIf="breeds?.length">
+    <swiper-container loop="true" pagination="true">
+      @for (breed of breeds; track breed) {
       <swiper-slide class="swiper-container">
         <img [src]="breed.url" alt="image" class="w-100">
       </swiper-slide>
-    }
-  </swiper-container>
-  <div class="product-detail">
-    <div class="product-detail-name">
-      <h1>{{ breeds[0]?.breeds[0]?.name }} - {{breeds[0]?.breeds[0]?.origin }} </h1>
-      <p>{{ breeds[0]?.breeds[0]?.description }}</p>
-    </div>
-    <div class="product-detail-size">
-      <div class="actions">
-        <button class="button contained w-100" [routerLink]="['/login']" >Adoptar</button>
+      }
+    </swiper-container>
+    <div class="product-detail">
+      <div class="product-detail-name">
+        <h1>{{ breeds[0]?.breeds[0]?.name }} - {{breeds[0]?.breeds[0]?.origin }} </h1>
+        <p>{{ breeds[0]?.breeds[0]?.description }}</p>
+      </div>
+      <div class="product-detail-size">
+        <div class="actions">
+          <button class="button contained w-100" [routerLink]="['/login']">Adoptar</button>
+        </div>
+      </div>
+      <div class="product-detail-size">
+        <div class="actions">
+          <button class="button outlined w-100" [routerLink]="['/breeds-table']">Tabla comparativa</button>
+        </div>
       </div>
     </div>
   </div>
+  <div class="card is-loading" *ngIf="!breeds?.length">
+    <div class="image"></div>
+    <div class="content">
+      <h2></h2>
+      <p></p>
+    </div>
+  </div>
+
 </div>
