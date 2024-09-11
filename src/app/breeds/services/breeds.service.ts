@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BreedsService {
 
-  private URL_API = "http://localhost:3000/api/v1";
+  private URL_API = environment.API_URL;
   constructor(private http: HttpClient) { }
 
 
