@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Breed } from '../../shared/models/breed.model';
 import { BehaviorSubject } from "rxjs";
+import { Breed } from '../model/breed.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,15 +30,6 @@ export class StoreService {
     this.showSnackBar = false;
     this.myFavorites.next(this.shoppingCart);
   }
-
-  getShoppingCart(){
-    return this.shoppingCart;
-  }
-
-  getTotal(){
-    return this.shoppingCart.reduce((sum, item) => sum + 2522, 0);
-  }
-
 
   setStoreBreeds(products: Breed[]){
     localStorage.setItem('favorites_breeds', JSON.stringify(products));
