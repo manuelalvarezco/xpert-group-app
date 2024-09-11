@@ -1,0 +1,36 @@
+
+@import '../../../sass/variables.scss';
+
+.login {
+  display: flex;
+  justify-content: center;
+}
+.auth-container {
+  padding: 30px 16px;
+  width: 450px;
+}
+
+.auth {
+  margin-bottom: 20px;
+  &>h1{
+    font-size: 20px;
+    color: $dymgray-color;
+  }
+  &>button {
+    margin: 10px 0;
+  }
+}
+.input-container_item {
+  margin: 10px 0;
+}
+
+.auth-register {
+  text-align: center;
+  &>p{
+    color: $primary-color;
+  }
+  &>a {
+    color: $dymgray-color;
+    text-decoration: none;
+  }
+}

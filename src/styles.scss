@@ -1,0 +1,42 @@
+@import './sass/variables.scss';
+@import './sass/buttons';
+@import './sass/inputs';
+@import './sass/selects';
+
+html, body { height: 100%; }
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.d-flex{
+  display: flex;
+}
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.ml-2 {
+  margin-left: 12px;
+}
+
+.container {
+  max-width: 1200px;
+    margin: 0 auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.d-block {
+  display: block!important;
+}

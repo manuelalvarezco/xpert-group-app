@@ -1,0 +1,31 @@
+
+.overlay-conatainer{
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  bottom: 0;
+}
+
+
+.overlay-wrapper{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  transition: all ease-out .5s;
+
+}
+
+.show {
+  display: block;
+  animation: fadeIn 1s;
+  @keyframes fadeIn {
+    from {display: none;}
+    to {display: block;}
+  }
+}

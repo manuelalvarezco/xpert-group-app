@@ -1,0 +1,147 @@
+@import './variables.scss';
+
+
+input {
+  height: 2.5rem;
+  padding: 10px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $dark-gray-color;
+  border-radius: 5px;
+  color: $dymgray-color;
+  background-color: $white-color;
+}
+
+input:focus{
+  opacity: 1;
+  outline: none;
+}
+
+/*Inputs outline*/
+
+input.outline.focus{
+  border: 2px solid $purple-color;
+}
+input.outline.error{
+  border: 2px solid $danger-color;
+}
+input.outline:disabled{
+  border: none;
+  background-color: $dark-gray-color;
+}
+
+/*Inputs fill*/
+input.fill{
+  outline: none;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid $dark-gray-color;
+  background-color: $gray-color;
+}
+
+input.fill.focus{
+  border-bottom: 2px solid $purple-color;
+}
+
+input.fill:disabled{
+  background-color: $dark-gray-color;
+}
+
+/* Error Group*/
+input.fill.error{
+  border-bottom: 2px solid $danger-color;
+}
+
+.error_message{
+  margin: 5px;
+  font-size: 12px;
+  color: $danger-color;
+}
+
+/*With Lbels*/
+
+.form_input{
+  position: relative;
+}
+
+.form_input input {
+  z-index: 1;
+  opacity: .5;
+}
+.form_input input:focus{
+  border: 2px solid $purple-color;
+}
+
+.form_input label{
+  position: absolute;
+  left: 16px;
+  top: 10px;
+  font-size: 16px;
+  z-index: -1;
+}
+
+
+.form_input > button {
+  margin: 3px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  height: 33px;
+  background: $white-color;
+  color: $purple-color;
+  border: none;
+  outline: none;
+}
+
+.form_input > button:hover{
+  color: $danger-color;
+}
+
+/* Fill with labels*/
+.form__fill-input {
+  position: relative;
+}
+.form__fill-input input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $dymgray-color;
+  background-color: $gray-color;
+}
+.form__fill-input input:focus{
+  border-bottom: 2px solid $purple-color;
+}
+
+.form__fill-input label{
+  position: absolute;
+  left: 16px;
+  top: 10px;
+  color: $dymgray-color;
+  font-size: 16px;
+}
+
+
+.form__fill-input > button {
+  margin: 3px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  height: 33px;
+  width: 30px;
+  background: $gray-color;
+  border: none;
+  outline: none;
+  opacity: .5;
+}
+
+.form__fill-input > button:hover{
+  color: $danger-color;
+}
+
+input.filled{
+  opacity: .5;
+  z-index: 1;
+}
+
+.form__fill-input label {
+  z-index: -1;
+}

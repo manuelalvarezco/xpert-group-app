@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card_header">
+      <div class="card_header-image">
+          <img class="rouded" [src]="breed.url" [alt]="breed.name">
+      </div>
+  </div>
+  <div class="card_body">
+      <h2 class="card_body-title">{{ breed.name }}</h2>
+  </div>
+  <div class="card-footer actions">
+      <div class="card-footer-actions">
+        <button class="button text" [routerLink]="['/breeds/' + breed.breed_id]" routerLinkActive="router-link-active" >Detalles</button>
+        <button class="button icon" (click)="addToFavorite(breed)">
+          <img width="20" src="https://www.svgrepo.com/show/13666/heart.svg" alt="favorite">
+        </button>
+      </div>
+      <div class="card-footer-icons">
+      </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+@import '../../../../sass/variables.scss';
+
+.list-properties {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+}
+.list-properties_item {
+  width: 100%;
+}
+
+
+// properties
+
+
+
+.properties {
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+
+    &>h2{
+      text-align: center;
+      color: $dymgray-color;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+  .list-properties {
+    grid-template-columns: 1fr 1fr;
+  }
+  .properties {
+    padding: 0 16px;
+  }
+}
+@media screen and (max-width:764px) {
+  .list-properties {
+    grid-template-columns: 1fr;
+  }
+}

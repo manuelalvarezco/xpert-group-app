@@ -1,0 +1,47 @@
+<header>
+  <div class="brand">
+    <a routerLink="/">
+      <img width="150" src="../../../assets/logo.png" alt="myow">
+    </a>
+    <div class="mobile-menu">
+      <div class="mobile-menu cart">
+        <span class="productsCount" *ngIf="breedsCount > 0">{{breedsCount}}</span>
+        <button class="button icon" routerLink="/properties/cart">
+          <img width="20" src="https://www.svgrepo.com/show/13666/heart.svg" alt="cart">
+        </button>
+      </div>
+      <div class="mobile-menu cart">
+        <button class="button icon" routerLink="/auth">
+          <img width="20" src="../.././../../assets/icons/person.svg" alt="account">
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <div class="menu" [class.d-block]="isOpen">
+    <ul class="menu_items">
+      <li class="menu_option">
+        <div class="desktop-menu cart">
+          <button class="button icon" routerLink="/">
+            <img width="20" src="../.././../../assets/icons/home.svg" alt="home">
+          </button>
+        </div>
+      </li>
+      <li class="menu_option">
+        <div class="desktop-menu cart">
+          <span class="productsCount" *ngIf="breedsCount > 0">{{breedsCount}}</span>
+          <button class="button icon" routerLink="/properties/cart">
+            <img width="20" src="https://www.svgrepo.com/show/13666/heart.svg" alt="favorite">
+          </button>
+        </div>
+      </li>
+      <li class="menu_option">
+        <div class="desktop-menu cart">
+          <button class="button icon" routerLink="/login">
+            <img width="20" src="../.././../../assets/icons/person.svg" alt="account">
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>

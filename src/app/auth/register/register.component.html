@@ -1,0 +1,24 @@
+<div class="container register">
+  <div class="auth-container">
+    <form (ngSubmit)="register($event)" [formGroup]="form">
+      <div class="auth">
+        <h1>Registro</h1>
+        <div id="outline" class="input-container_item">
+          <input type="text" placeholder="Nombre completo" class="outline" formControlName="name">
+        </div>
+        <div id="outline" class="input-container_item">
+          <input type="email" placeholder="Correo" class="outline" formControlName="email">
+        </div>
+        <div id="outline" class="input-container_item">
+          <input type="password" placeholder="Contraseña" class="outline" formControlName="password">
+      </div>
+      <button class="button contained w-100" [disabled]="!form.valid">Registrarse</button>
+      </div>
+    </form>
+    <hr>
+    <div class="auth-login">
+      <p>or</p>
+      <a routerLink="/login">Iniciar sesión</a>
+    </div>
+  </div>
+</div>

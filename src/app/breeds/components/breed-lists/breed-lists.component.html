@@ -1,0 +1,10 @@
+<div class="properties">
+  <h2>Top búsquedas</h2>
+  <div class="list-properties">
+    @for (breed of breeds; track breed) {
+      <div class="list-properties_item">
+        <app-breed [breed]="breed"></app-breed>
+      </div>
+    }
+  </div>
+</div>

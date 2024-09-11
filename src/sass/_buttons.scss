@@ -1,0 +1,108 @@
+
+button {
+  height: 2.5rem;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  &.button-color{
+    padding: 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    color: white;
+
+    &.pink{
+      background-color: $pink-color;
+    }
+    &.cian{
+      background-color: $cian-color;
+    }
+    &.black{
+      background-color: $black-color;
+    }
+    &.purple{
+      background-color: $purple-color;
+    }
+  }
+
+  &.sm {
+    min-width: 150px;
+  }
+
+
+  &.button_rounded-sm{
+    border-radius: $border-radius-sm;
+  }
+
+  &.button.contained{
+    background-color: $primary-color;
+    color: $white-color;
+    text-transform: uppercase;
+  }
+
+  &.button.outlined{
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background-color: transparent;
+  }
+  &.button.text{
+    border: none;
+    color: $primary-color;
+    background-color: transparent;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  &.button.icon{
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 5px;
+    &:hover{
+      background-color: $bg-color;
+    }
+    &:focus{
+      animation: onFocus 1s;
+      @keyframes onFocus {
+        from {background-color: $primary-color;}
+        to {background-color: $bg-color}
+      }
+
+    }
+  }
+
+  &.button.icon span{
+    margin-left: $border-radius-sm;
+  }
+  .material-symbols-outlined{
+    font-size: 18px;
+  }
+  /* States*/
+  &.button.contained:disabled{
+    background-color: $dark-gray-color;
+    color: dymgray-color;
+    cursor: not-allowed;
+  }
+  &.button.contained.hover{
+    background-color: $primary-color;
+    color: $white-color;
+    box-shadow: 0px 5px 7px 2px rgba(0,0,0,0.15);
+  }
+  &.button.contained.focus{
+    background-color: $primary-color;
+    opacity: .8;
+    color: $white-color;
+    box-shadow: 0px 5px 7px 2px rgba(0,0,0,0.09);
+  }
+}

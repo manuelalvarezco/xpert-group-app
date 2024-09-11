@@ -1,0 +1,7 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<div class="overlay-conatainer" [class.show]="isAdded">
+  <div class="overlay-wrapper">
+    <app-snackbar (aceptSnackbar)="quitSnackbar()" [textLabel]="'Añadido a favoritos!'" [textButton]="'OK'"></app-snackbar>
+  </div>
+</div>
