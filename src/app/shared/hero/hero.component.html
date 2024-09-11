@@ -4,12 +4,13 @@
     <h1>Encuentra tu <span class="primary-color">Amigo perfecto</span></h1>
     <div class="form-group-inline">
       <select name="breed" [formControl]="breed">
-        <option value="">Raza</option>
+        <option value="">Seleccione...</option>
         @for (breed of breeds; track breed) {
         <option [value]="breed.breed_id">{{ breed.name}}</option>
         }
       </select>
-      <button type="button" class="button sm contained" [routerLink]="['/breeds/' + breedSelected]" routerLinkActive="router-link-active" >Explorar</button>
+      <button type="button" [disabled]="!breedSelected" class="button sm contained"
+        [routerLink]="['/breeds/' + breedSelected]" routerLinkActive="router-link-active">Explorar</button>
     </div>
   </div>
 </div>

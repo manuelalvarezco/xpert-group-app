@@ -24,15 +24,10 @@ export class BreedDetailComponent implements OnInit {
   ngOnInit(): void {
    this.route.paramMap.pipe(
       switchMap((params) => {
-        console.log('params', params);
-
         this.breedId = params.get('id');
-        console.log('this.hotelId', this.breedId);
-
         return this.breedsService.getBreedImagesById(this.breedId)
       })
     ).subscribe((breeds: any) => {
-      console.log('breeds', breeds);
       this.breeds = breeds;
     })
 

@@ -1,5 +1,5 @@
 <div *ngIf="breeds?.length" class="container">
-  <swiper-container loop="true">
+  <swiper-container loop="true" pagination="true">
     @for (breed of breeds; track breed) {
       <swiper-slide class="swiper-container">
         <img [src]="breed.url" alt="image" class="w-100">

@@ -16,10 +16,7 @@ export class HeroComponent {
 
   constructor() {
     this.breed.valueChanges.subscribe((breed) => {
-      console.log('breed', breed);
       this.breedSelected = breed;
-      console.log('this.breedSelected', this.breedSelected);
-
     });
   }
 

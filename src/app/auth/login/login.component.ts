@@ -17,6 +17,7 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
+    private router: Router
     ) {
     this.buildForm();
   }
@@ -26,6 +27,9 @@ export class LoginComponent {
     this.authService.login(this.form.value).subscribe(
       (resp: any) => {
         this.authService.grantedAccess();
+        setTimeout(() => {
+          this.router.navigateByUrl('/home');
+        }, 2000);
       },(error: any) => {
         this.authService.accessDenied('Login');
       }

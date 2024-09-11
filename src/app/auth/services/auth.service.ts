@@ -23,8 +23,8 @@ export class AuthService {
 
   grantedAccess(){
     Swal.fire({
-      title: 'Congrats!',
-      text: 'Your Access is Granted',
+      title: 'Felicitaciones!',
+      text: 'Acceso condedido!',
       icon: 'success',
       confirmButtonText: 'OK'
     })
@@ -33,7 +33,7 @@ export class AuthService {
   accessDenied(module: string){
     Swal.fire({
       title: 'Error!',
-      text: `Error in ${module}`,
+      text: `Usuario/Contraseña incorrecta`,
       icon: 'error',
       confirmButtonText: 'OK'
     })

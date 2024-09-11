@@ -26,6 +26,9 @@ export class RegisterComponent {
     this.authService.register(this.form.value).subscribe(
       (resp: any) => {
         this.authService.grantedAccess();
+        setTimeout(() => {
+          this.router.navigateByUrl('/login');
+        }, 2000);
       },(error: any) => {
         this.authService.accessDenied('Register');
       }

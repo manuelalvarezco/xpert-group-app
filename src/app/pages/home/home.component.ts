@@ -33,8 +33,6 @@ export class HomeComponent {
     }
     this.breedsService.getBreeds(params).subscribe((breeds: any) => {
       this.breeds = breeds;
-      console.log('this.breeds', this.breeds);
-
     });
   }
 }

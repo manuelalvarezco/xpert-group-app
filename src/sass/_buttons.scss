@@ -90,7 +90,7 @@ button {
   }
   /* States*/
   &.button.contained:disabled{
-    background-color: $dark-gray-color;
+    background-color: #cc748e;
     color: dymgray-color;
     cursor: not-allowed;
   }
